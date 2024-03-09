@@ -16,15 +16,7 @@ document.getElementById("file-in").addEventListener("input", (e) => {
             if (!departments.has(c.department)) {
                 departments.set(c.department, { data: createEmptyTableData() });
             }
-            
             const dep = departments.get(c.department);
-            if (!dep.data[c.day]) {
-                dep.data[c.day] = []; // Ensure the day array is initialized
-            }
-            if (!dep.data[c.day][c.time / 60]) {
-                dep.data[c.day][c.time / 60] = []; // Ensure the time slot array is initialized
-            }
-            
             dep.data[c.day][c.time / 60][c.grade - 1] = {
                 span: c.duration / 60,
                 name: c.code,
