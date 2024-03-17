@@ -30,7 +30,6 @@ export function mergeTableCells(data) {
                             data[day][slot + i][grade].span = 0;
                         } catch (e) {
                             console.log(e);
-                            console.log((data[day][slot + i][grade].span = 0));
                         }
                     }
                 }
